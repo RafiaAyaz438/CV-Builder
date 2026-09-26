@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Welcome Page -->
+    <section id="welcome">
+        <div class="welcome-box">
+            <h1>CV / Resume Builder</h1>
+            <p>Create your professional CV in a simple and easy way.</p>
+            <button onclick="showBuilder()">Create My CV</button>
+        </div>
+    </section>
+
+
+    <!-- CV Builder -->
+    <section id="builder" class="hidden">
+
+        <header>
+            <h1>CV / Resume Builder</h1>
+            <p>Enter your information below</p>
+        </header>
+
+        <div class="container">
+
+            <!-- Form -->
+            <div class="form-box">
+
+                <h2>Personal Information</h2>
+
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="job" placeholder="Job Title">
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Phone Number">
+                <input type="text" id="address" placeholder="Address">
+
+                <h2>About Me</h2>
+                <textarea id="about" placeholder="Write a short introduction about yourself"></textarea>
+
+                <h2>Education</h2>
+                <textarea id="education" placeholder="Example: Matric - ABC School - 2026"></textarea>
+
+                <h2>Skills</h2>
+                <textarea id="skills" placeholder="Example: HTML, CSS, JavaScript, Python"></textarea>
+
+                <h2>Projects</h2>
+                <textarea id="projects" placeholder="Write your projects"></textarea>
+
+                <h2>Experience</h2>
+                <textarea id="experience" placeholder="Write your experience"></textarea>
+
+                <button class="generate-btn" onclick="generateCV()">
+                    Generate CV
+                </button>
+
+                <button class="print-btn" onclick="window.print()">
+                    Print / Save PDF
+                </button>
+
+                <button class="reset-btn" onclick="resetCV()">
+                    Reset
+                </button>
+
+            </div>
+
+
+            <!-- CV Preview -->
+            <div class="cv-box" id="cvPreview">
+
+                <div class="cv-header">
+                    <h1 id="cvName">Your Name</h1>
+                    <h3 id="cvJob">Your Job Title</h3>
+
+                    <p id="cvContact">
+                        Email | Phone | Address
+                    </p>
+                </div>
+
+                <div class="cv-section">
+                    <h2>About Me</h2>
+                    <p id="cvAbout">
+                        Your introduction will appear here.
+                    </p>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Education</h2>
+                    <p id="cvEducation">
+                        Your education will appear here.
+                    </p>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Skills</h2>
+                    <p id="cvSkills">
+                        Your skills will appear here.
+                    </p>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Projects</h2>
+                    <p id="cvProjects">
+                        Your projects will appear here.
+                    </p>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Experience</h2>
+                    <p id="cvExperience">
+                        Your experience will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

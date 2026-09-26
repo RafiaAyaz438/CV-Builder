@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+}
+
+/* Welcome Page */
+
+#welcome {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #182848, #4b6cb7);
+}
+
+.welcome-box {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.welcome-box h1 {
+    font-size: 40px;
+    color: #182848;
+    margin-bottom: 15px;
+}
+
+.welcome-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.welcome-box button {
+    background: #182848;
+    color: white;
+}
+
+.welcome-box button:hover {
+    background: #4b6cb7;
+}
+
+
+/* Builder */
+
+.hidden {
+    display: none;
+}
+
+header {
+    background: #182848;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* Form */
+
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+    color: #182848;
+    margin: 15px 0 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.generate-btn {
+    background: #182848;
+    color: white;
+}
+
+.print-btn {
+    background: #4b6cb7;
+    color: white;
+}
+
+.reset-btn {
+    background: #777;
+    color: white;
+}
+
+.generate-btn:hover,
+.print-btn:hover,
+.reset-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* CV Preview */
+
+.cv-box {
+    background: white;
+    min-height: 800px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cv-header {
+    text-align: center;
+    border-bottom: 2px solid #182848;
+    padding-bottom: 20px;
+}
+
+.cv-header h1 {
+    color: #182848;
+    font-size: 32px;
+}
+
+.cv-header h3 {
+    margin: 8px 0;
+    color: #555;
+}
+
+.cv-section {
+    margin-top: 25px;
+}
+
+.cv-section h2 {
+    color: #182848;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.cv-section p {
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-box h1 {
+        font-size: 30px;
+    }
+
+    .cv-box {
+        padding: 25px;
+    }
+}
+
+
+/* Print */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .form-box,
+    header {
+        display: none;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .cv-box {
+        box-shadow: none;
+        width: 100%;
+    }
+}
